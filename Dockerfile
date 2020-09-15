@@ -47,6 +47,8 @@ ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && \
     go get -u github.com/golang/dep/cmd/dep
 
+ENV BOT graphql-bot
+
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["node"]
 
