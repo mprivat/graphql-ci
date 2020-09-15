@@ -23,6 +23,7 @@ RUN pip install --no-cache-dir --upgrade pip awscli boto3
 
 RUN npm init -y && \
     npm install -g graphqlviz && \
+    npm install -g xgql && \
     npm install -g graphql-schema-linter
 
 RUN rm package*.json
