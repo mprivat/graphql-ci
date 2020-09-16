@@ -29,8 +29,12 @@ RUN npm init -y && \
 
 RUN rm package*.json
 
-ENV GOLANG_VERSION 1.15.2
+# Rust
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
 
+# Go
+ENV GOLANG_VERSION 1.15.2
 RUN goRelArch='linux-amd64'; \
     goRelSha256='b49fda1ca29a1946d6bb2a5a6982cf07ccd2aba849289508ee0f9918f6bb4552' && \
     wget --quiet -O go.tgz https://golang.org/dl/go${GOLANG_VERSION}.${goRelArch}.tar.gz && \
