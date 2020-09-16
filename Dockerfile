@@ -17,7 +17,8 @@ RUN apk add --no-cache \
   gcc \
   zip \
   libc-dev \
-  gnupg
+  gnupg \
+  ttf-linux-libertine
 
 RUN pip install --no-cache-dir --upgrade pip awscli boto3
 
