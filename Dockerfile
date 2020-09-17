@@ -6,6 +6,7 @@ RUN apk add --no-cache \
   py-setuptools \
   ca-certificates \
   openssl \
+  openssl-dev \
   openssh-client \
   groff \
   less \
@@ -32,6 +33,11 @@ RUN rm package*.json
 # Rust
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
+
+RUN git clone https://github.com/hoop33/gumwood.git /opt/gumwood && \
+      cd /opt/gumwood && \
+      /root/.cargo/bin/cargo build --release && \
+      ln -s /opt/gumwood/target/release /bin/gumwood
 
 # Go
 ENV GOLANG_VERSION 1.15.2
