@@ -8,8 +8,8 @@ RUN apk add --no-cache \
   openssl \
   openssl-dev \
   openssh-client \
-  groff \
   less \
+  groff \
   bash \
   curl \
   graphviz \ 
