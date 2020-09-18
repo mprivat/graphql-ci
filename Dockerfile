@@ -14,8 +14,8 @@ RUN apk add --no-cache \
   curl \
   graphviz \ 
   git \
-  jq \
   gcc \
+  jq \
   zip \
   libc-dev \
   gnupg \
