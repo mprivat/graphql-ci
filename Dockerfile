@@ -15,10 +15,10 @@ RUN apk add --no-cache \
   graphviz \ 
   git \
   gcc \
+  gnupg \
   jq \
   zip \
   libc-dev \
-  gnupg \
   ttf-linux-libertine
 
 RUN pip install --no-cache-dir --upgrade pip awscli boto3
