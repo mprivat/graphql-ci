@@ -1,9 +1,10 @@
 FROM node:13-alpine
 
+ENV PYTHONUNBUFFERED=1
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN python3 -m ensurepip
+
 RUN apk add --no-cache \
-  python \
-  py-pip \
-  py-setuptools \
   ca-certificates \
   openssl \
   openssl-dev \
@@ -21,7 +22,7 @@ RUN apk add --no-cache \
   libc-dev \
   ttf-linux-libertine
 
-RUN pip install --no-cache-dir --upgrade pip awscli boto3 pylode rdflib
+RUN pip3 install --no-cache-dir --upgrade pip setuptools awscli boto3 pylode rdflib
 
 RUN npm init -y && \
     npm install -g graphqlviz && \
