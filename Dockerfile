@@ -21,11 +21,10 @@ RUN apk add --no-cache \
   libc-dev \
   ttf-linux-libertine
 
-RUN pip install --no-cache-dir --upgrade pip awscli boto3
+RUN pip install --no-cache-dir --upgrade pip awscli boto3 pylode rdflib
 
 RUN npm init -y && \
     npm install -g graphqlviz && \
-    npm install -g pylode && \
     npm install -g xgql && \
     npm install -g graphql-schema-linter
 
