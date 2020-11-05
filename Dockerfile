@@ -64,4 +64,3 @@ ENV BOT graphql-bot
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["node"]
 
-
