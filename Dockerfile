@@ -61,6 +61,8 @@ ENV BOT graphql-bot
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && \
     go get -u github.com/golang/dep/cmd/dep
 
+COPY anchors.py /opt/anchors.py
+
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["node"]
