@@ -62,6 +62,7 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && \
     go get -u github.com/golang/dep/cmd/dep
 
 COPY anchors.py /opt/anchors.py
+COPY header.py /opt/header.py
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
