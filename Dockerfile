@@ -55,12 +55,12 @@ RUN goRelArch='linux-amd64'; \
 
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+ENV BOT graphql-bot
 
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && \
     go get -u github.com/golang/dep/cmd/dep
 
-ENV BOT graphql-bot
-
 ENTRYPOINT ["docker-entrypoint.sh"]
+
 CMD ["node"]
 
