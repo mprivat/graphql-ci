@@ -35,6 +35,7 @@ RUN rm package*.json
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
 
+ADD https://api.github.com/repos/hoop33/gumwood/git/refs/heads/master version.json
 RUN git clone https://github.com/hoop33/gumwood.git /opt/gumwood && \
       cd /opt/gumwood && \
       /root/.cargo/bin/cargo build --release && \
