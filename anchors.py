@@ -2,7 +2,7 @@ import sys
 import re
 
 def lower_repl(match):
-     return '](#' + match.group(1).lower()
+     return '](#' + match.group(1).lower() + ')'
 
 content = sys.stdin.read()
 
