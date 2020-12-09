@@ -31,6 +31,8 @@ RUN npm init -y && \
 
 RUN rm package*.json
 
+RUN xgql --version
+
 # Rust
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
