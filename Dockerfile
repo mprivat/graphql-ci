@@ -20,7 +20,8 @@ RUN apk add --no-cache \
   jq \
   zip \
   libc-dev \
-  ttf-linux-libertine
+  ttf-linux-libertine \
+  openjdk11
 
 RUN pip3 install --no-cache-dir --upgrade pip setuptools awscli boto3 pylode rdflib
 
@@ -65,6 +66,7 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && \
 
 COPY anchors.py /opt/anchors.py
 COPY header.py /opt/header.py
+COPY owl2vowl.jar /opt/owl2vowl.jar
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
