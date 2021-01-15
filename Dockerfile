@@ -27,7 +27,7 @@ RUN pip3 install --no-cache-dir --upgrade pip setuptools awscli boto3 pylode rdf
 
 RUN npm init -y && \
     npm install -g graphqlviz && \
-    npm install -g xgql@1.9.0 && \
+    npm install -g xgql@1.9.1 && \
     npm install -g graphql-schema-linter
 
 RUN rm package*.json
