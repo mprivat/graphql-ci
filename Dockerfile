@@ -29,7 +29,7 @@ RUN npm init -y && \
     npm install -g graphqlviz && \
     npm install -g xgql@1.9.1 && \
     npm install -g graphql-schema-linter && \
-    npm install -g dataplan-cli@0.0.1
+    npm install -g dataplan-cli@0.1.0
 
 RUN rm package*.json
 
