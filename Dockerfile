@@ -21,7 +21,8 @@ RUN apk add --no-cache \
   zip \
   libc-dev \
   ttf-linux-libertine \
-  openjdk11
+  openjdk11 \
+  make
 
 RUN pip3 install --no-cache-dir --upgrade pip setuptools awscli boto3 pylode rdflib
 
